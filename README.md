@@ -31,13 +31,15 @@ each other.
    + **Records** - The application allows users to view their previous spending records on food.
    + **About** – The application will display the developer information and a little bit of description of what the application will do.
 
+
 ### Overall Screen Map
 ![image](https://user-images.githubusercontent.com/130138046/234537141-5c31edc2-8d5c-4ef7-b806-a4d6ec0c4fd6.png)
+
 
 ### UI Design and wireframe based on Screen Map
 ![UI](https://user-images.githubusercontent.com/130138046/234538763-46fc0b10-157f-48c5-930d-df13f4f805b2.png)
 
-### Explaination of each of the elements consist in the UI above together with its label.
 
+### Explaination of each of the elements consist in the UI above together with its label.
 ![UI(1)](https://user-images.githubusercontent.com/130138046/234539079-44b3891b-89dc-4c77-a2fc-5f8a0b32db87.png)
 
