@@ -1,6 +1,6 @@
-## Mobile Project
+# Mobile Project
 
-### Instruction
+## Instruction
 The theme for this semester is **Food/Health/Energy**.
 
 Develop a mobile application according to the theme assigned to you. The mobile 
@@ -22,15 +22,22 @@ Your application must be original, not inherited or replicated from any existing
 application, not inherited from any Final Year Project, and it must be different from
 each other.
 
-#### Overall Screen Map
+## Application That I developed
+1. **Application Name** - Meals Expenses Tracker (**MET**)
+2. **Description** - An application that can keep track our spending on foods that we purchase day-to-day. User also can review back what they have purchase previously.
+3. **List of application features with its description** 
+   + **Home** – The application allows users to have a quick glance on their spending.
+   + **Food Expenses** - The application allows users to choose their meals, insert the name of the food together with the price.
+   + **Records** - The application allows users to view their previous spending records on food.
+   + **About** – The application will display the developer information and a little bit of description of what the application will do.
+
+## Overall Screen Map
 ![image](https://user-images.githubusercontent.com/130138046/234537141-5c31edc2-8d5c-4ef7-b806-a4d6ec0c4fd6.png)
 
-
-
-#### UI Design and wireframe based on Screen Map
+## UI Design and wireframe based on Screen Map
 ![UI](https://user-images.githubusercontent.com/130138046/234538763-46fc0b10-157f-48c5-930d-df13f4f805b2.png)
 
-#### Explaination of each of the elements consist in the UI above together with its label.
+## Explaination of each of the elements consist in the UI above together with its label.
 
 ![UI(1)](https://user-images.githubusercontent.com/130138046/234539079-44b3891b-89dc-4c77-a2fc-5f8a0b32db87.png)
 
