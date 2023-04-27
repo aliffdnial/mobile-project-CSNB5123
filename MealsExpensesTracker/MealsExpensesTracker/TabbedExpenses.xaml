@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MealsExpensesTracker.TabbedExpenses">
+  <!--Pages can be added as references or inline-->
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            Title="Overview"
+            x:Name="OverallSpendingTabs">
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout HorizontalOptions="Fill" Padding="0,20,0,0">
+                    <ListView x:Name="display" ItemsSource="{Binding DateRecorded}">
+                        <ListView.Header>
+                        <Grid>
+                            <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Meals" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="Price" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Total" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="1" Text="{Binding Meals}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="2" Text="{Binding Name}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="3" Text="{Binding Price}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="4" Text="{Binding TotalPrice}" HorizontalOptions="Center" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Find by Meals" x:Name="FindStatusTab" >
+        <ScrollView>
+            <StackLayout>
+                <Picker x:Name="findMeals" Title="Select Meals" VerticalOptions="CenterAndExpand" />
+                <Button x:Name="btnFind" Text="Find" Clicked="OnFindRecord"/>
+
+                <ListView x:Name="showFindRecord" ItemsSource="{Binding DateRecorded}">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Meals" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="Price" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Total" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="1" Text="{Binding Meals}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="2" Text="{Binding Name}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="3" Text="{Binding Price}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="4" Text="{Binding TotalPrice}" HorizontalOptions="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>

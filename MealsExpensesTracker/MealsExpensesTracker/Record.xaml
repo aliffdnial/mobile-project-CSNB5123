@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MealsExpensesTracker.Record">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Fill" Padding="0,20,0,0">
+                 <!--<Label x:Name="display" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>--> 
+                <ListView x:Name="display" ItemsSource="{Binding DateRecorded}">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Meals" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="Price" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Total" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
+                                <Label Grid.Column="1" Text="{Binding Meals}" HorizontalOptions="Center" />
+                                <Label Grid.Column="2" Text="{Binding Name}" HorizontalOptions="Center" />
+                                <Label Grid.Column="3" Text="{Binding Price}" HorizontalOptions="Center" />
+                                <Label Grid.Column="4" Text="{Binding TotalPrice}" HorizontalOptions="Center" />
+                            </Grid>
+                        </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

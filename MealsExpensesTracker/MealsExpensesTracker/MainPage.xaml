@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MealsExpensesTracker.MainPage" 
+             Title="Meals Expenses Tracker" >
+    <ScrollView>
+        <StackLayout>
+            <FlexLayout Padding="0,20,0,0">
+                <!--Meal Selection-->
+                <Label Text="Select meal:" Padding="5,15,50,10" FontSize="20"/>
+                <Picker x:Name="mealLabel" Title="Meal type">
+                    <Picker.Items>
+                        <x:String>Breakfast</x:String>
+                        <x:String>Lunch</x:String>
+                        <x:String>Dinner</x:String>
+                    </Picker.Items>
+                </Picker>
+            </FlexLayout>
+
+            <!--Name-->
+            <FlexLayout>
+                <Label Text="Name:"  Padding="5,10,100,10" FontSize="20"/>
+                <Entry x:Name="inputName" Placeholder="Enter food" Keyboard="Text"/>
+            </FlexLayout>
+
+            <!--Price-->
+            <FlexLayout>
+                <Label Text="Price: Rm" Padding="5,20,75,10" FontSize="20"/>
+                <Entry x:Name="inputPrice" Placeholder="Enter price" Keyboard="Numeric"/>
+            </FlexLayout>
+
+            <!--Add & Clear Btn-->
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
+                <Button x:Name="addButton" Text="ADD" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="LightGreen" TextColor="White"  Clicked="OnAdd" />
+                <Button x:Name="clearButton" Text="CLEAR" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="LightSlateGray" TextColor="White"  Clicked="OnReset" />
+            </FlexLayout>
+
+            <!--Display All Items-->
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
+                <Label x:Name="resMeal" Text="Meal" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+                <Label x:Name="resName" Text="Name" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+                <Label x:Name="resPrice" Text="Rm" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+                <Label x:Name="resTotal" Text="Rm" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+            </FlexLayout>
+
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
+                <DatePicker x:Name="selectDate" DateSelected="onDatePickerSelected" Format="dd/MM/yyyy"/>
+            </FlexLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand">
+                <Button x:Name="saveButton" Text="Save" VerticalOptions="CenterAndExpand" Clicked="OnSaveRecord" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

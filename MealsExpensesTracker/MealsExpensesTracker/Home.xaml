@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="MealsExpensesTracker.Home">
+
+    <ContentPage.Content>
+        <StackLayout Margin="7">
+            <chart:SfChart VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="My Spending on Food in Percentage (%)" TextColor="Black" FontSize="20">
+                    </chart:ChartTitle>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend>
+                        <chart:ChartLegend.LabelStyle>
+                            <chart:ChartLegendLabelStyle FontSize="15"/>
+                        </chart:ChartLegend.LabelStyle>
+                    </chart:ChartLegend>
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Series>
+                    <chart:PieSeries EnableAnimation="True" ItemsSource="{Binding Data}" XBindingPath="Meals" YBindingPath="Price" EnableTooltip="True">
+                        <chart:PieSeries.DataMarker>
+                            <chart:ChartDataMarker LabelContent="Percentage">
+                                <chart:ChartDataMarker.LabelStyle>
+                                    <chart:DataMarkerLabelStyle FontSize="15" FontAttributes="Bold" LabelPosition="Auto">
+                                    </chart:DataMarkerLabelStyle>
+                                </chart:ChartDataMarker.LabelStyle>
+                            </chart:ChartDataMarker>
+                        </chart:PieSeries.DataMarker>
+                        <chart:PieSeries.ColorModel>
+                            <chart:ChartColorModel Palette="Custom">
+                                <chart:ChartColorModel.CustomBrushes>
+                                    <Color>#FFC107</Color>
+                                    <Color>#2196F3</Color>
+                                    <Color>#4CAF50</Color>
+                                </chart:ChartColorModel.CustomBrushes>
+                            </chart:ChartColorModel>
+                        </chart:PieSeries.ColorModel>
+                    </chart:PieSeries>
+                </chart:SfChart.Series>
+
+            </chart:SfChart>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

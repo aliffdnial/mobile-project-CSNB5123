@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MealsExpensesTracker.About">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="dev.png" HeightRequest="170" WidthRequest="170" Margin="0,30,0,10" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Name" FontSize="18" Margin="0,10,0,0" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                <Label Text="Meals Expenses Tracker" FontSize="18" Margin="0,10,0,0" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                <Label Text="Meals Expenses Tracker is an intuitive and easy-to-use application designed for individuals who want to keep track of their food expenses effectively." FontSize="18" Margin="20,15,20,0"/>
+                <Label Text="With this app, users can quickly glance at their spending and gain insights into their food consumption habits." FontSize="18" Margin="20,15,20,0"/>
+                <Label Text="The Food Expenses feature of the app allows users to input what they eat for breakfast, lunch, and dinner, along with the date and the price of the meal. Users can easily add new entries. The app automatically categorizes the expenses into different food groups, making it easy for users to see where they are spending the most money. " FontSize="18" Margin="20,15,15,0"/>
+                <Label Text="The Records feature of the app lets users view their previous spending records, giving them a clear picture of their food expenses over time. Users can filter the records by date, meal type, making it easy to track their spending habits and identify areas where they can cut back." FontSize="18" Margin="20,15,15,0"/>
+                <Label Text="Overall, Meals Expenses Tracker is an excellent tool for anyone who wants to stay on top of their food expenses and maintain a healthy budget. With its user-friendly interface and powerful features, the app makes it easy to keep track of what you're eating and how much you're spending." FontSize="18" Margin="20,15,15,0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
